@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		759577D321AE977E00474467 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 759577D121AE977E00474467 /* Aspects.m */; };
+		7D187B1BEA0B869DD9515EFB /* Pods_IPAPatch_DummyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2B6108AC013DBA248A9994 /* Pods_IPAPatch_DummyApp.framework */; };
 		C63AC1A51E838BB70094B1C5 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C63AC1A21E838BB70094B1C5 /* fishhook.c */; };
 		C63AC1A61E838BB70094B1C5 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = C63AC1A31E838BB70094B1C5 /* fishhook.h */; };
 		C63AC1AA1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */; };
@@ -52,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0938A3352331DA8A4B43D6CD /* Pods-IPAPatch-DummyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPAPatch-DummyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IPAPatch-DummyApp/Pods-IPAPatch-DummyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6D2B6108AC013DBA248A9994 /* Pods_IPAPatch_DummyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPAPatch_DummyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		759577D121AE977E00474467 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		759577D221AE977E00474467 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		C63AC1A21E838BB70094B1C5 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		C63AC1A31E838BB70094B1C5 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		C63AC1A41E838BB70094B1C5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 		C6B2635C1E7BCB31009B4DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6B263621E7BCD03009B4DEA /* patch.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = patch.sh; sourceTree = "<group>"; };
 		C6DDBB621F5146AD00A42BE2 /* create_ipa.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = create_ipa.sh; sourceTree = "<group>"; };
+		DD8FA170C081EACC657206AE /* Pods-IPAPatch-DummyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPAPatch-DummyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IPAPatch-DummyApp/Pods-IPAPatch-DummyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +92,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D187B1BEA0B869DD9515EFB /* Pods_IPAPatch_DummyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35E8827E399A46E92C8B063F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D2B6108AC013DBA248A9994 /* Pods_IPAPatch_DummyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55274E9D6094ED71C0CB0E2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0938A3352331DA8A4B43D6CD /* Pods-IPAPatch-DummyApp.debug.xcconfig */,
+				DD8FA170C081EACC657206AE /* Pods-IPAPatch-DummyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C63AC1A01E838B8E0094B1C5 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +141,8 @@
 				C6B263291E7BCA86009B4DEA /* Tools */,
 				C6B2634A1E7BCB31009B4DEA /* IPAPatch-DummyApp */,
 				C6B263081E7BC97B009B4DEA /* Products */,
+				55274E9D6094ED71C0CB0E2C /* Pods */,
+				35E8827E399A46E92C8B063F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +164,8 @@
 				C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.m */,
 				C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */,
 				C63AC1A91E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m */,
+				759577D221AE977E00474467 /* Aspects.h */,
+				759577D121AE977E00474467 /* Aspects.m */,
 			);
 			path = IPAPatch;
 			sourceTree = "<group>";
@@ -210,10 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6B2635D1E7BCB31009B4DEA /* Build configuration list for PBXNativeTarget "IPAPatch-DummyApp" */;
 			buildPhases = (
+				65FFFB3CCFDBA80918FCFA6A /* [CP] Check Pods Manifest.lock */,
 				C6B263451E7BCB31009B4DEA /* Sources */,
 				C6B263461E7BCB31009B4DEA /* Frameworks */,
 				C6B263471E7BCB31009B4DEA /* Resources */,
 				C6B263631E7BD0B4009B4DEA /* ShellScript */,
+				46E6A9EA19ACA6E9B770C13E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +272,7 @@
 					};
 					C6B263481E7BCB31009B4DEA = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 4BK622B2V3;
 						ProvisioningStyle = Automatic;
 					};
 					C6DDBB5C1F51468D00A42BE2 = {
@@ -288,6 +320,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		46E6A9EA19ACA6E9B770C13E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IPAPatch-DummyApp/Pods-IPAPatch-DummyApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fishhook.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IPAPatch-DummyApp/Pods-IPAPatch-DummyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65FFFB3CCFDBA80918FCFA6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IPAPatch-DummyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C6B263631E7BD0B4009B4DEA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759577D321AE977E00474467 /* Aspects.m in Sources */,
 				C64288391E7BF9E900C0BBB0 /* ProjectConfigurationWarning.cpp in Sources */,
 				C6B263501E7BCB31009B4DEA /* AppDelegate.m in Sources */,
 				C6B2634D1E7BCB31009B4DEA /* main.m in Sources */,
@@ -494,11 +573,12 @@
 		};
 		C6B2635E1E7BCB31009B4DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0938A3352331DA8A4B43D6CD /* Pods-IPAPatch-DummyApp.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4BK622B2V3;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -508,7 +588,7 @@
 				INFOPLIST_FILE = "IPAPatch-DummyApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wutian.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wutian.example.nathan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -518,17 +598,18 @@
 		};
 		C6B2635F1E7BCB31009B4DEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8FA170C081EACC657206AE /* Pods-IPAPatch-DummyApp.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4BK622B2V3;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_BUNDLE_ID=$(PRODUCT_BUNDLE_IDENTIFIER)";
 				INFOPLIST_FILE = "IPAPatch-DummyApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wutian.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wutian.example.nathan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

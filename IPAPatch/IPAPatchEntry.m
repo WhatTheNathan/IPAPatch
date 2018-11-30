@@ -8,6 +8,13 @@
 
 #import "IPAPatchEntry.h"
 #import <UIKit/UIKit.h>
+#import "Aspects.h"
+#import "fishhook.h"
+#import <objc/runtime.h>
+#import <objc/objc.h>
+#import "objc/message.h"
+
+static IMP (*original_class_getMethodImplementation)(Class cls, SEL sel);
 
 @implementation IPAPatchEntry
 
@@ -17,6 +24,20 @@
     
     // For Example:
     [self for_example_showAlert];
+    
+    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
+        NSLog(@"View Controller %@ will appear animated: %tu", aspectInfo.instance, animated);
+    } error:NULL];
+    
+    struct rebinding my_rebinding = { "class_getMethodImplementation", new_class_getMethodImplementation, (void *)&original_class_getMethodImplementation };
+    rebind_symbols((struct rebinding[1]){my_rebinding}, 1);
+}
+
+
+IMP new_class_getMethodImplementation(Class cls, SEL sel)
+{
+    NSLog(@"getMethodImp %@ %@", NSStringFromClass(cls), NSStringFromSelector(sel));
+    return original_class_getMethodImplementation(cls, sel);
 }
 
 + (void)for_example_showAlert
